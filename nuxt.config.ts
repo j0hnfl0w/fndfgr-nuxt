@@ -1,5 +1,3 @@
-import functions from './sockets/index';
-
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   ssr: false,
@@ -10,4 +8,9 @@ export default defineNuxtConfig({
       handler: '~/server/middleware/sockets',
     },
   ],
+  // nitro: {
+  //   plugins: [
+  //     // './plugins/test'
+  //   ]
+  // }
 });

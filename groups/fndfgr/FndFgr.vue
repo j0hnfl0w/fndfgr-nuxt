@@ -1,17 +1,17 @@
 <template>
-  <div class="flex flex-col w-full h-screen">
+  <div class="flex flex-col h-screen w-full">
     <span>{{ x }}, {{ y }}</span>
     <span>{{ xy }}</span>
     <span>{{ width }}, {{ height }}</span>
     <span>{{ xyText }}</span>
-    <!-- <small>{{ $io }}</small> -->
+    <span>{{ $io.id }}</span>
     <pre>{{ state }}</pre>
-    <div class="fixed w-full h-full top-0 left-0 right-0 bottom-0 z-100">
-      <div class="relative w-full h-full">
+    <div class="h-full w-full top-0 right-0 bottom-0 left-0 z-100 fixed">
+      <div class="h-full w-full relative">
         <div
           v-for="(s, skey) in state"
           :key="skey"
-          class="h-10px w-10px rounded-2xl bg-red-400 absolute"
+          class="bg-red-400 rounded-2xl h-10px w-10px absolute"
           :style="{ top: s.y * 100 + '%', left: s.x * 100 + '%' }"
         ></div>
       </div>
@@ -52,7 +52,7 @@ $io.on('state', (e) => {
 });
 onMounted(() => {
   console.log(':onMounted');
-  console.log(Object.keys($io.ids));
+  console.log(Object.keys($io));
 });
 </script>
 

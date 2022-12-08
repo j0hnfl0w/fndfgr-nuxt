@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@lenslayers/nuxt-test": "^0.0.3",
-    "nuxt-internal-socket": "^1.0.3",
-    "socket.io": "^4.5.4"
+    "socket.io": "^4.5.4",
+    "socket.io-client": "^4.5.4"
   }
 }

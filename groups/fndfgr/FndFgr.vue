@@ -21,6 +21,14 @@
 
 <script lang="ts" setup>
 const { $io } = useNuxtApp();
+
+$io.on('connect', () => {
+  console.log(':connect');
+});
+$io.on('disconnect', () => {
+  console.log(':disconnect');
+});
+
 const { x, y } = useMouse();
 const { width, height } = useWindowSize();
 const xy = computed(() => {
